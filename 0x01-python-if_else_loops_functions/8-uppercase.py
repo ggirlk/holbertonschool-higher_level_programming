@@ -14,4 +14,5 @@ def uppercase(str):
              b += 1
          if k == 0:
              print("{}".format(str[i]), end = "")
-         i += 1 
+         i += 1
+     print('\n')
