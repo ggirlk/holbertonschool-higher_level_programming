@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def islower(c):
     i = 97
     while i != 123:
