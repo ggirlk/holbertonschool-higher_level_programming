@@ -15,4 +15,3 @@ def uppercase(str):
          if k == 0:
              print("{}".format(str[i]), end = "")
          i += 1
-     print('\n')
