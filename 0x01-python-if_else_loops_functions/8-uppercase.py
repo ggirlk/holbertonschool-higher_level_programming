@@ -7,7 +7,7 @@ def uppercase(str):
         a = 97
         b = 65
         k = 0
-        if i == len(str) - 1 :
+        if i == len(str) - 1:
             _end = "\n"
         while a != 123:
             if ord(str[i]) == a or ord(str[i]) == b:
