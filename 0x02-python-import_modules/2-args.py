@@ -2,7 +2,8 @@
 import sys
 if __name__ == "__main__":
     i = 1
-    print("{:d} arguments:".format(len(sys.argv)))
-    while i != len(sys.argv):
-        print("{:d}: {}".format(i, sys.argv[i]))
+    argv = sys.argv
+    print("{:d} arguments:".format(len(argv) - 1))
+    while i != len(argv):
+        print("{:d}: {}".format(i, argv[i]))
         i += 1
