@@ -7,4 +7,4 @@ if __name__ == "__main__":
     while i != len(argv):
         s += int(argv[i])
         i += 1
-print(s)  
+    print(s)
