@@ -1,11 +1,5 @@
 #!/usr/bin/python3
 def print_list_integer(my_list=[]):
     for i in range(0, len(my_list)):
-        if (isinteger(my_list[i])):
+        if (my_list[i] in range(0, 10000000)):
             print("{:d}".format(my_list[i]))
-def isinteger(a):
-    try:
-        int(a)
-        return True
-    except ValueError:
-        return False
