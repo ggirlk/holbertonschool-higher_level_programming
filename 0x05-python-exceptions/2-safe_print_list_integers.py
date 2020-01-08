@@ -8,7 +8,6 @@ def safe_print_list_integers(my_list=[], x=0):
             k += 1
             print("{:d}".format(my_list[i]), end="")
         except:
-            i += 0
+            print()
         i += 1
-    print()
     return k
