@@ -11,12 +11,12 @@ def add_integer(a, b=98):
         a: integer
         b: integer and if not specified it took 98 """
     t = 0
-    if a is not None or isinstance(a, float) or isinstance(a, int):
+    if isinstance(a, float) or isinstance(a, int):
         a = int(a)
     else:
         t = 1
         raise TypeError('a must be an integer')
-    if b is not None or isinstance(b, float) or isinstance(b, int):
+    if isinstance(b, float) or isinstance(b, int):
         b = int(b)
     else:
         t = 1
