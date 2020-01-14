@@ -18,6 +18,10 @@ def matrix_divided(matrix, div):
     l0 = []
     i = len(matrix[0])
     for mx in matrix:
+        if not isinstance(mx, list):
+            raise TypeError(
+                    'matrix must be a matrix (list of lists)of integers/floats'
+                )
         l1 = []
         if len(mx) != i:
             raise TypeError('Each row of the matrix must have the same size')
@@ -26,9 +30,10 @@ def matrix_divided(matrix, div):
                 raise TypeError(
                     'matrix must be a matrix (list of lists)of integers/floats'
                 )
-            r = my/div
-            r = int(r * 100)
-            r = r / 100
-            l1.append(r)
+            else:
+                r = my/div
+                r = int(r * 100)
+                r = r / 100
+                l1.append(r)
         l0.append(l1)
     return (l0)
