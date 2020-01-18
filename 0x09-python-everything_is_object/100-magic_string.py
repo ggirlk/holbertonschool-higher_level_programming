@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-li = []
+def applist(li=[]):
+    return li
 def magic_string():
-    li.append("Holberton")
-    return ', '.join(li)
+    l = applist()
+    l.append("Holberton")
+    return ', '.join(l)
