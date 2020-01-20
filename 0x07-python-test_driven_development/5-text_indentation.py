@@ -9,7 +9,7 @@ def text_indentation(text):
             pass
         else:
             s += i
-        if (i == ".") or (i == "?"):
+        if (i == ".") or (i == "?") or (i == ":"):
             k = 1
             print(s)
             print()
