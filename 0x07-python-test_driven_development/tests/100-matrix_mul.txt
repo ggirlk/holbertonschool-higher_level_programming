@@ -1,0 +1,70 @@
+The ``100-matrix_mul`` module
+======================
+
+Using ``100-matrix_mul``
+-------------------
+
+First import
+``matrix_mul`` from the ``100-matrix_mul`` module:
+
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Now use it:
+
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+>>> matrix_mul([[1, 2]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+>>> matrix_mul()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, "4"]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 28, in matrix_mul
+    raise TypeError("m_a should contain only integers or floats")
+TypeError: m_a should contain only integers or floats
+
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, [4]]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 28, in matrix_mul
+    raise TypeError("m_a should contain only integers or floats")
+TypeError: m_a should contain only integers or floats
+
+>>> matrix_mul([[1, 2], [3, 4]], "coucou")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 6, in matrix_mul
+    raise TypeError("m_b must be a list")
+TypeError: m_b must be a list
+
+>>> matrix_mul("Coucou", [[1, 2], [3, [4]]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 4, in matrix_mul
+    raise TypeError("m_a must be a list")
+TypeError: m_a must be a list
+
+>>> matrix_mul([[1, 2], [3, 4]], [])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 10, in matrix_mul
+    raise TypeError("m_b can't be empty")
+TypeError: m_b can't be empty
+
+>>> matrix_mul([], [[1, 2], [3, [4]]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 8, in matrix_mul
+    raise TypeError("m_a can't be empty")
+TypeError: m_a can't be empty
