@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
         matrix: list of integers or floats
         div: number
     """
-    if div == 0:
+    if div <= 0:
         raise ZeroDivisionError('division by zero')
     l0 = []
     i = len(matrix[0])
