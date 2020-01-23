@@ -13,7 +13,7 @@ def read_lines(filename="", nb_lines=0):
         i = 0
         nb = number_of_lines(filename)
         if nb_lines <= 0 and nb <= nb_lines:
-            print(f.read())
+            print(f.read(), end="")
         else:
             while i < nb_lines:
                 print(f.readline(), end="")
