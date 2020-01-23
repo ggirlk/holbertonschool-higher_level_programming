@@ -8,4 +8,3 @@ def read_lines(filename="", nb_lines=0):
             while i <= nb_lines:
                 print(f.readline(), end="", flush=True)
                 i+= 1
-        f.close()
