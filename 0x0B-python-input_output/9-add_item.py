@@ -12,6 +12,11 @@ def listappend(args, l=[]):
 
 if __name__ == "__main__":
     file = "add_item.json"
-    args = load(file) + listappend(sys.argv)
+    args = []
+    try:
+        args = load(file)
+    except:
+        pass
+    args += listappend(sys.argv)
     save(args, file)
     load(file)
