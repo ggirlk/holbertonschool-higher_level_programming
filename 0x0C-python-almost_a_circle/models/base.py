@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Base Module 
+""" Base Module
     is the parent of all shapes
 """
 
@@ -24,7 +24,7 @@ class Base():
         """ 'to_json_string' a static method that
         convert a dictionary list to json string """
         if list_dictionaries is None:
-            return []
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
 
@@ -32,4 +32,3 @@ class Base():
         """ 'save_to_file' save an obj to a json file """
         with open(self+'.json', 'w') as f:
             f.write('yes')
-

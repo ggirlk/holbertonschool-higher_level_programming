@@ -86,9 +86,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """ returns a string that defines the rectangle """
-        return("[Rectangle] (" + str(self.id) + ") "
-               + str(self.x)+"/"+str(self.y)+" - "
-               + str(self.width)+"/"+str(self.height))
+        return("[Rectangle] (" + str(self.id) + ") " +
+               str(self.x)+"/"+str(self.y)+" - " +
+               str(self.width)+"/"+str(self.height))
 
     def update(self, *args, **kwargs):
         """ update rectangle with new values """
@@ -105,7 +105,7 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ returns attributes into dictionary """
         return {'id': self.id,
-               'width': self.width,
-               'height': self.height,
-               'x': self.x,
-               'y': self.y}
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y}
