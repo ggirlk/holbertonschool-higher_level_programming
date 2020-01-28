@@ -41,3 +41,14 @@ class Base():
     def from_json_string(json_string):
         """ returns the list of the JSON string representation """
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes already set """
+        dummy = cls(dictionary['width'], dictionary['height'])
+        w = dictionary['width']
+        h = dictionary['height']
+        x = dictionary['x']
+        y = dictionary['y']
+        dummy.update(width=w, height=h, x=x, y=y)
+        return dummy
