@@ -4,6 +4,7 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """ unittest module """
 
     def test_inc(self):
         b1 = Base()
