@@ -1,2 +1,2 @@
 -- lists all the tables of a database
-SELECT * FROM information_schema.columns
+SHOW CREATE TABLE first_table
