@@ -2,14 +2,14 @@
 """Get all states"""
 
 if __name__ == "__main__":
-    import sys
+    from sys import argv
     import MySQLdb
-
-
-    db = MySQLdb._mysql.connect(host="localhost",
-                            port=3306, user=sys.argv[1],
-                            passwd=sys.argv[2], db=sys.argv[3])
-    db.query("SELECT id, name FROM states ORDER BY id ASC")
-    req = db.store_result()
-    for r in req.fetch_row(maxrows=0):
-        print("({}, {})".format(r[0], r[1]))
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3], charset="utf8")
+    cur = db.cursor()
+    cur.execute("SELECT id, name FROM states ORDER BY id ASC")
+    req = cur.fetchall()
+    for r in req:
+        print("({}, '{}')".format(r[0], r[1]))
+    cur.close()
+    db.close()
