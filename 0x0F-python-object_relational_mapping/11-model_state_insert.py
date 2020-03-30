@@ -4,7 +4,7 @@
 from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 Session = sessionmaker()
 
 if __name__ == "__main__":
@@ -17,6 +17,7 @@ if __name__ == "__main__":
     newState = State(name="Louisiana")
     session.add(newState)
     session.flush()
+    session.commit()
     session.refresh(newState)
     print(newState.id)
     session.close()
