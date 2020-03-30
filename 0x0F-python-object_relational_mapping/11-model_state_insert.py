@@ -5,7 +5,6 @@ from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
-from sqlalchemy import table, column
 Session = sessionmaker()
 
 if __name__ == "__main__":
