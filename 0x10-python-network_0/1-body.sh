@@ -1,3 +1,3 @@
 #!/bin/bash
 #cURL body size
-curl -X GET $1
+curl -sLX GET $1
