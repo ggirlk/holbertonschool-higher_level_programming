@@ -1,3 +1,3 @@
 #!/bin/bash
 #cURL body size
-curl -X DELETE $1
+curl -X DELETE -s "$1"
