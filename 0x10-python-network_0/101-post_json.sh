@@ -1,3 +1,3 @@
 #!/bin/bash
 #cURL body size
-curl --data @my_json_0 "$1"
+curl -sIX POST -d @my_json_0 "$1"
