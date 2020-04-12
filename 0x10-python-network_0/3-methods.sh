@@ -1,3 +1,3 @@
 #!/bin/bash
 #cURL body size
-curl -sIX OPTIONS "$1"
+curl -sI "$1" | grep "Allow:" | cut -d " " -f2-
