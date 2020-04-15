@@ -10,5 +10,5 @@ with urllib.request.urlopen(req) as response:
 print("Body response:")
 print("    - type: {}".format(type(the_page)))
 print("    - content: {}".format(the_page))
-s = str(the_page).encode('utf-8')
+s = the_page.decode('utf-8')
 print("    - utf8 content: {}".format(s))
