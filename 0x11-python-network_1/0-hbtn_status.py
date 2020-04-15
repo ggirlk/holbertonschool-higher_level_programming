@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Model to fetch web page """
+
 import urllib.request
 
 
