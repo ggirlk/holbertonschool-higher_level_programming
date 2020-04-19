@@ -2,7 +2,6 @@
 """ Model to fetch web page """
 
 import requests
-import sys
 
 if __name__ == "__main__":
     req = requests.get("https://intranet.hbtn.io/status")
