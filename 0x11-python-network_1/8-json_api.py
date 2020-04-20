@@ -8,7 +8,7 @@ import requests
 def searchUser(p=""):
     args = {'q': p}
     req = requests.post('http://0.0.0.0:5000/search_user', data=args)
-    result = req.json()
+    res = req.json()
     if isinstance(res, dict):
         if len(res) is not 0:
             print("[{}] {}".format(res['id'], res['name']))
