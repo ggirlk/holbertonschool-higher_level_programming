@@ -6,7 +6,7 @@ import requests
 
 
 def searchUser(p=""):
-    args = dict(q = p,)
+    args = {'q': p}
     req = requests.post('http://0.0.0.0:5000/search_user', data=args)
     result = req.json()
     if isinstance(res, dict):
