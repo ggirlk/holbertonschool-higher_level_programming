@@ -5,5 +5,8 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    req = requests.get(sys.argv[1])
-    print(req.status_code)
+    try:
+        req = requests.get(sys.argv[1])
+        print(req.content.decode("utf-8"))
+    except requests.exceptions.HTTPError as ex:
+        print("Error code: {}".format(ex.decode('utf-8')))
