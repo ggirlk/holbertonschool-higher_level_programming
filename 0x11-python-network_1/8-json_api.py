@@ -8,13 +8,13 @@ import requests
 def searchUser(p=""):
     args = {'q': p}
     req = requests.post('http://0.0.0.0:5000/search_user', data=args)
-    res = req.json()
-    if isinstance(res, dict):
+    try:
+        res = req.json()
         if len(res) is not 0:
             print("[{}] {}".format(res['id'], res['name']))
         else:
             print('No result')
-    else:
+    except:
         print('Not a valid JSON')
 
 
