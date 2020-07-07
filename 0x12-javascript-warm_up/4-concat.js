@@ -1,17 +1,15 @@
 #!/usr/bin/node
-let args = process.argv.slice(2);
+const args = process.argv.slice(2);
 let str = '';
-if (args[0])
-{
-str += args[0];
+if (args[0]) {
+  str += args[0];
 } else {
-str += "undefined";
+  str += 'undefined';
 }
-str += " is ";
-if (args[1])
-{
-str += args[1];
+str += ' is ';
+if (args[1]) {
+  str += args[1];
 } else {
-str += "undefined";
+  str += 'undefined';
 }
 console.log(str);
